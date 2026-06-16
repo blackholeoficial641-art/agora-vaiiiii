@@ -14,3 +14,6 @@ main.py
 eu odeio meu github vtmnc
 
 ass: mat
+
+agora vai 
+ass andison
