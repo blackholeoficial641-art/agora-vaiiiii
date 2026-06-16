@@ -1,5 +1,4 @@
-##pagina zero do site
-from flask import Flask, render_templates
+from flask import Flask, render_template
 
 app = Flask("__main__")
 
