@@ -10,3 +10,7 @@
 adicionado por christopher pagina inicial 
 
 main.py
+
+eu odeio meu github vtmnc
+
+ass: mat
