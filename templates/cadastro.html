@@ -1,43 +1,69 @@
--<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
 
+    <!-- Bootstrap 5.3.0 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link href="static/cadastro.css" rel="stylesheet" />
+    <!-- Seu CSS customizado -->
+    <link href="/static/cadastro.css" rel="stylesheet" />
   </head>
 
   <body>
-    <nav class="cabeçalho">navbar</nav>
-    <div class="box">
-      <h2>Cadastro</h2>
+    <!-- Navbar (Você pode substituir pelo componente real do Bootstrap depois) -->
+    <nav class="cabeçalho navbar navbar-expand-lg navbar-light bg-light px-3">
+      <span class="navbar-brand">Navbar</span>
+    </nav>
 
-      <form method="POST">
-        <input
-          class="nome form"
-          name="nome"
-          placeholder="Nome Completo"
-        />
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+      <div class="box p-4 border rounded shadow-sm bg-white" style="width: 100%; max-width: 400px;">
+        <h2 class="text-center mb-4">Cadastro</h2>
 
-        <input
-          class="email form-control"
-          name="email"
-          type="email"
-          placeholder="Email"
-        />
+        <!-- Ajuste: Adicionado action para a rota do Flask (ex: /auth/cadastro ou /cadastro) -->
+        <form action="/cadastro" method="POST">
+          
+          <!-- Ajuste: Classe alterada para form-control e adicionado required -->
+          <div class="mb-3">
+            <input
+              class="form-control nome"
+              name="nome"
+              type="text"
+              placeholder="Nome Completo"
+              required
+            />
+          </div>
 
-        <input
-          class="senha form-control"
-          name="senha"
-          type="password"
-          placeholder="Senha"
-        />
+          <div class="mb-3">
+            <input
+              class="form-control email"
+              name="email"
+              type="email"
+              placeholder="Email"
+              required
+            />
+          </div>
 
-        <button class="btn-cadastro">Cadastrar</button>
-      </form>
+          <div class="mb-3">
+            <input
+              class="form-control senha"
+              name="senha"
+              type="password"
+              placeholder="Senha"
+              required
+            />
+          </div>
+
+          <!-- Ajuste: Adicionado type="submit" e classes de botão do Bootstrap -->
+          <button type="submit" class="btn btn-primary w-100 btn-cadastro">
+            Cadastrar
+          </button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
