@@ -67,3 +67,8 @@ class Agendamento(db.Model):
         db.String(10),
         nullable=False
     )
+
+    hospital = db.Column(
+        db.String(250),
+        nullable=False
+    )
