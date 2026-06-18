@@ -1,0 +1,17 @@
+<div class="consultas-container">
+
+{% for consulta in consultas %}
+
+<div class="consulta-card">
+    <h3>{{ consulta.medico }}</h3>
+
+    <p>{{ consulta.data }}</p>
+
+    <p>{{ consulta.horario }}</p>
+
+    <p>{{ consulta.especialidade }}</p>
+</div>
+
+{% endfor %}
+
+</div>
