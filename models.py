@@ -1,5 +1,3 @@
-# models.py
-
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
@@ -19,6 +17,22 @@ class Usuario(db.Model):
         nullable=False
     )
 
+    cpf = db.Column(
+    db.String(14),
+    unique=True,
+    nullable=False
+    )
+
+    genero = db.Column(
+    db.String(30),
+    nullable=False
+    )
+
+    data_nascimento = db.Column(
+    db.Date,
+    nullable=False
+    )
+
     email = db.Column(
         db.String(200),
         unique=True,
@@ -35,7 +49,6 @@ class Usuario(db.Model):
         default=False
     )
 
-    # Relacionamento com agendamentos
     agendamentos = db.relationship(
         "Agendamento",
         backref="usuario",
@@ -58,6 +71,11 @@ class Agendamento(db.Model):
         nullable=False
     )
 
+    hospital = db.Column(
+        db.String(300),
+        nullable=False
+    )
+
     data_consulta = db.Column(
         db.Date,
         nullable=False
@@ -68,7 +86,10 @@ class Agendamento(db.Model):
         nullable=False
     )
 
-    hospital = db.Column(
-        db.String(250),
-        nullable=False
-    )
+    especialidade = db.Column(
+    db.String(100),
+    nullable=False
+)
+    def __repr__(self):
+
+        return f"<Agendamento {self.hospital}>"

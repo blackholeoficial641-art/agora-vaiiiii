@@ -71,16 +71,20 @@
 
 <div class="container mt-4">
 
-    <div class="header shadow">
+    <div class="d-flex justify-content-center gap-3 mb-4">
 
-        <h1>🏥 Rede Credenciada</h1>
-
-        <p class="mb-0">
-
-            Hospitais encontrados próximos à sua localização
-
-        </p>
-
+        <a href="/paciente" class="btn btn-ciano">
+    
+            👤 Área do Paciente
+    
+        </a>
+    
+        <a href="/" class="btn btn-outline-secondary">
+    
+            🏠 Voltar ao início
+    
+        </a>
+    
     </div>
 
     <h2 class="titulo">
@@ -88,20 +92,6 @@
         Hospitais próximos de {{ cidade }}
 
     </h2>
-
-    <div class="text-center mb-4">
-
-        <a href="/agendamento">
-
-            <button class="btn btn-ciano">
-
-                Agendar Consulta
-
-            </button>
-
-        </a>
-
-    </div>
 
     <hr>
 
@@ -134,6 +124,14 @@
                         <strong>Hospital</strong><br>
 
                         {{ consulta.hospital }}
+
+                    </p>
+
+                    <p>
+
+                        <strong>Especialidade</strong><br>
+
+                        {{ consulta.especialidade }}
 
                     </p>
 
@@ -223,7 +221,7 @@
 
                             <button
                                 type="submit"
-                                class="btn btn-ciano">
+                                class="btn btn-ciano w-100">
 
                                 Agendar neste hospital
 
