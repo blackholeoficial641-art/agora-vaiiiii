@@ -69,3 +69,13 @@ label {
     border-radius: 2px;
 }
 
+.cadastre-se {
+    text-decoration: none; /* sem sublinhado normalmente */
+    gap: 5px;
+    font-size: small;
+}
+
+.cadastre-se:hover {
+    text-decoration: underline; /* sublinhado só quando passar o mouse */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
