@@ -2,54 +2,201 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Agendar Consulta</title>
 
     <style>
 
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
         body{
-            font-family: Arial, Helvetica, sans-serif;
-            background:#f5f5f5;
-            padding:40px;
-        }
 
-        .container{
-            max-width:500px;
-            margin:auto;
-            background:white;
+            background:linear-gradient(135deg,#00BCD4,#0097A7);
+
+            min-height:100vh;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
             padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,.15);
+
         }
 
-        h2{
+        .card{
+
+            width:100%;
+            max-width:650px;
+
+            background:white;
+
+            border-radius:20px;
+
+            padding:40px;
+
+            box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+        }
+
+        h1{
+
             text-align:center;
+
+            color:#0097A7;
+
+            margin-bottom:10px;
+
+        }
+
+        p{
+
+            text-align:center;
+
+            color:#666;
+
+            margin-bottom:30px;
+
         }
 
         label{
+
             display:block;
-            margin-top:15px;
+
+            margin-top:20px;
+
+            margin-bottom:8px;
+
+            font-weight:bold;
+
+            color:#333;
+
         }
 
-        input{
+        input,
+        select{
+
             width:100%;
-            padding:10px;
-            margin-top:5px;
+
+            padding:14px;
+
+            border:2px solid #B2EBF2;
+
+            border-radius:10px;
+
+            font-size:16px;
+
+            transition:.3s;
+
+        }
+
+        input:focus,
+        select:focus{
+
+            outline:none;
+
+            border-color:#00BCD4;
+
+            box-shadow:0 0 8px rgba(0,188,212,.35);
+
         }
 
         button{
-            margin-top:25px;
+
             width:100%;
-            padding:12px;
-            background:#2b7cff;
-            color:white;
+
+            margin-top:35px;
+
+            padding:15px;
+
             border:none;
-            border-radius:5px;
+
+            border-radius:12px;
+
+            background:#00BCD4;
+
+            color:white;
+
+            font-size:18px;
+
             cursor:pointer;
+
+            font-weight:bold;
+
+            transition:.3s;
+
         }
 
         button:hover{
-            background:#1d5fd0;
+
+            background:#0097A7;
+
+            transform:translateY(-3px);
+
+        }
+
+        .icone{
+
+            font-size:70px;
+
+            text-align:center;
+
+            margin-bottom:15px;
+
+        }
+
+        .hospital{
+
+            background:#E0F7FA;
+
+            border:2px solid #00BCD4;
+
+            border-radius:12px;
+
+            padding:15px;
+
+            margin-bottom:15px;
+
+            color:#333;
+
+            font-weight:bold;
+
+            text-align:center;
+
+        }
+
+        .voltar{
+
+            text-align:center;
+
+            margin-top:20px;
+
+        }
+
+        .voltar a{
+
+            text-decoration:none;
+
+            color:#0097A7;
+
+            font-weight:bold;
+
+        }
+
+        .voltar a:hover{
+
+            text-decoration:underline;
+
         }
 
     </style>
@@ -58,42 +205,31 @@
 
 <body>
 
-<div class="container">
+<div class="card">
 
-    <h2>Agendar Consulta</h2>
-    
-    <select name="especialidade" required>
+    <div class="icone">
 
-        <option value="">Selecione uma especialidade</option>
-    
-        <option>Pediatria</option>
-    
-        <option>Oftalmologia</option>
-    
-        <option>Otorrinolaringologia</option>
-    
-        <option>Urologia</option>
-    
-        <option>Ginecologia</option>
-    
-        <option>Dermatologia</option>
-    
-        <option>Nutrição</option>
-    
-        <option>Cardiologia</option>
-    
-        <option>Ortopedia</option>
-    
-        <option>Neurologia</option>
-    
-    </select>
+        🩺
+
+    </div>
+
+    <h1>
+
+        Agendar Consulta
+
+    </h1>
+
     <p>
 
-        <strong>Hospital escolhido:</strong>
-
-        {{ hospital }}
+        Escolha a especialidade, data e horário da consulta.
 
     </p>
+
+    <div class="hospital">
+
+        🏥 {{ hospital }}
+
+    </div>
 
     <form action="/agendar" method="POST">
 
@@ -103,7 +239,64 @@
             value="{{ hospital }}"
         >
 
-        <label>Data</label>
+        <label>
+
+            👨‍⚕️ Especialidade
+
+        </label>
+
+        <select
+            name="especialidade"
+            required
+        >
+
+            <option value="">
+
+                Selecione...
+
+            </option>
+
+            <option>Clínico Geral</option>
+
+            <option>Cardiologia</option>
+
+            <option>Dermatologia</option>
+
+            <option>Endocrinologia</option>
+
+            <option>Gastroenterologia</option>
+
+            <option>Ginecologia</option>
+
+            <option>Neurologia</option>
+
+            <option>Nutrição</option>
+
+            <option>Oftalmologia</option>
+
+            <option>Ortopedia</option>
+
+            <option>Otorrinolaringologia</option>
+
+            <option>Pediatria</option>
+
+            <option>Pneumologia</option>
+
+            <option>Psiquiatria</option>
+
+            <option>Psicologia</option>
+
+            <option>Reumatologia</option>
+
+            <option>Urologia</option>
+
+        </select>
+
+        <label>
+
+            📅 Data
+
+        </label>
 
         <input
             type="date"
@@ -111,7 +304,11 @@
             required
         >
 
-        <label>Horário</label>
+        <label>
+
+            🕒 Horário
+
+        </label>
 
         <input
             type="time"
@@ -119,13 +316,25 @@
             required
         >
 
-        <button type="submit">
+        <button
+            type="submit"
+        >
 
             Confirmar Agendamento
 
         </button>
 
     </form>
+
+    <div class="voltar">
+
+        <a href="/hospitais">
+
+            ← Voltar aos Hospitais
+
+        </a>
+
+    </div>
 
 </div>
 

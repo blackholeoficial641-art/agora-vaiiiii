@@ -20,8 +20,6 @@
 
         body{
 
-            background:linear-gradient(135deg,#00BCD4,#0097A7);
-
             min-height:100vh;
 
             display:flex;
@@ -30,28 +28,30 @@
 
             align-items:center;
 
+            background:linear-gradient(135deg,#00BCD4,#0097A7);
+
             padding:30px;
 
         }
 
         .card{
 
-            width:100%;
-            max-width:650px;
+            background:white;
 
-            background:rgba(255,255,255,.95);
+            width:100%;
+            max-width:700px;
 
             border-radius:20px;
 
-            padding:40px;
+            padding:45px;
 
             text-align:center;
 
-            box-shadow:0 20px 40px rgba(0,0,0,.25);
+            box-shadow:0 20px 45px rgba(0,0,0,.25);
 
         }
 
-        .icone{
+        .check{
 
             font-size:80px;
 
@@ -59,101 +59,57 @@
 
         }
 
-        .titulo{
+        h1{
 
-            font-size:38px;
-
-            color:#00ACC1;
-
-            margin-bottom:15px;
-
-        }
-
-        .nome{
-
-            font-size:28px;
-
-            color:#333;
-
-            margin-bottom:20px;
-
-        }
-
-        .texto{
-
-            font-size:18px;
-
-            color:#666;
-
-            margin-bottom:35px;
-
-        }
-
-        .info{
-
-            display:flex;
-
-            justify-content:center;
-
-            gap:20px;
-
-            flex-wrap:wrap;
-
-            margin-bottom:35px;
-
-        }
-
-        .caixa{
-
-            background:#E0F7FA;
-
-            width:180px;
-
-            padding:20px;
-
-            border-radius:15px;
-
-            border:2px solid #00BCD4;
-
-        }
-
-        .caixa h4{
-
-            color:#00838F;
+            color:#0097A7;
 
             margin-bottom:10px;
 
         }
 
-        .valor{
-
-            font-size:22px;
-
-            font-weight:bold;
-
-            color:#222;
-
-        }
-
         .mensagem{
 
-            background:#F1F8E9;
+            color:#666;
 
-            border-left:6px solid #4CAF50;
+            margin-bottom:35px;
 
-            padding:18px;
-
-            border-radius:10px;
-
-            margin-bottom:30px;
-
-            color:#444;
+            font-size:18px;
 
         }
 
-        .botao{
+        .info{
+
+            background:#E0F7FA;
+
+            border-left:8px solid #00BCD4;
+
+            border-radius:12px;
+
+            padding:20px;
+
+            margin-bottom:18px;
+
+            text-align:left;
+
+        }
+
+        .info strong{
+
+            color:#0097A7;
+
+            display:block;
+
+            margin-bottom:5px;
+
+        }
+
+        .btn{
 
             display:inline-block;
+
+            margin-top:25px;
+
+            padding:15px 35px;
 
             text-decoration:none;
 
@@ -161,11 +117,9 @@
 
             color:white;
 
-            padding:15px 35px;
-
             border-radius:12px;
 
-            font-size:18px;
+            font-size:17px;
 
             font-weight:bold;
 
@@ -173,7 +127,7 @@
 
         }
 
-        .botao:hover{
+        .btn:hover{
 
             background:#0097A7;
 
@@ -181,25 +135,13 @@
 
         }
 
-        @media(max-width:600px){
+        .rodape{
 
-            .titulo{
+            margin-top:35px;
 
-                font-size:30px;
+            color:#888;
 
-            }
-
-            .nome{
-
-                font-size:24px;
-
-            }
-
-            .caixa{
-
-                width:100%;
-
-            }
+            font-size:14px;
 
         }
 
@@ -209,77 +151,82 @@
 
 <body>
 
-    <div class="card">
+<div class="card">
 
-        <div class="icone">
+    <div class="check">
 
-            ✅
-
-        </div>
-
-        <h1 class="titulo">
-
-            Consulta Agendada!
-
-        </h1>
-
-        <h2 class="nome">
-
-            {{ nome }}
-
-        </h2>
-
-        <p class="texto">
-
-            Sua consulta foi registrada com sucesso em nosso sistema.
-
-            Compareça ao hospital na data e horário informados abaixo.
-
-        </p>
-
-        <div class="info">
-
-            <div class="caixa">
-
-                <h4>📅 Data</h4>
-
-                <div class="valor">
-
-                    {{ data }}
-
-                </div>
-
-            </div>
-
-            <div class="caixa">
-
-                <h4>🕒 Horário</h4>
-
-                <div class="valor">
-
-                    {{ hora }}
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="mensagem">
-
-            ✔ Seu agendamento foi salvo.
-
-            Você poderá consultar seus agendamentos sempre que acessar a página de hospitais.
-
-        </div>
-
-        <a href="/hospitais" class="botao">
-
-            ← Voltar para Hospitais
-
-        </a>
+        ✅
 
     </div>
+
+    <h1>
+
+        Consulta Agendada!
+
+    </h1>
+
+    <div class="mensagem">
+
+        Seu agendamento foi realizado com sucesso.
+
+    </div>
+
+    <div class="info">
+
+        <strong>Paciente</strong>
+
+        {{ nome }}
+
+    </div>
+
+    <div class="info">
+
+        <strong>Hospital</strong>
+
+        {{ hospital }}
+
+    </div>
+
+    <div class="info">
+
+        <strong>Especialidade</strong>
+
+        {{ especialidade }}
+
+    </div>
+
+    <div class="info">
+
+        <strong>Data</strong>
+
+        {{ data }}
+
+    </div>
+
+    <div class="info">
+
+        <strong>Horário</strong>
+
+        {{ hora }}
+
+    </div>
+
+    <a
+        href="/hospitais"
+        class="btn"
+    >
+
+        Voltar aos Hospitais
+
+    </a>
+
+    <div class="rodape">
+
+        OwlConvenial © 2026
+
+    </div>
+
+</div>
 
 </body>
 
