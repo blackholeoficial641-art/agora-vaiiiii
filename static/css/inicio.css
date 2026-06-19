@@ -30,7 +30,7 @@ body {
 }
 
 .area-paciente {
-    color: #00bbff;
+    color: #e9f1f4;
     text-decoration: none;
     font-weight: 600;
     font-size: 15px;
@@ -38,7 +38,7 @@ body {
 }
 
 .area-paciente:hover {
-    color: #0369a1;
+    color: #818181;
 }
 
 /* BARRA DE PROGRESSO */
@@ -49,9 +49,9 @@ body {
 }
 
 .progress {
-    width: 35%; /* Representa o primeiro passo do fluxo */
+    width: 100%; /* Representa o primeiro passo do fluxo */
     height: 100%;
-    background: linear-gradient(90deg, #0ea5e9, #2563eb);
+    background: linear-gradient(90deg, #000000, #2563eb);
     border-radius: 0 2px 2px 0;
 }
 

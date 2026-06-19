@@ -56,6 +56,15 @@ def agendar():
 with app.app_context():
     db.create_all()
 
+@app.route("/sobrenos")
+def sobrenos():
+
+    return render_template(
+
+        "sobrenos.html"
+
+    )
+
 # Inicialização do Servidor (Sempre no final do arquivo)
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
