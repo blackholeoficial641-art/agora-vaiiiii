@@ -1,110 +1,329 @@
-  <!DOCTYPE html>
-  <html lang="pt-br">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Owl Convenial+</title>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap"
-        rel="stylesheet"
-      />
+<head>
 
-      <link
-        rel="stylesheet"
-        href="{{ url_for('static', filename='css/inicio.css') }}"
-      />
-    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <body>
-      <!-- HEADER -->
-      <header class="header">
-        <div class="logo">
-          <img
+    <title>OwlConvenial</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+
+        <img
             src="{{ url_for('static', filename='Assets/img/logo.png') }}"
-            alt="Logo Owl Convenial"
-          />
+            alt="Logo OwlConvenial">
+
+        <div class="logo-texto">
+
+            <h2>OwlConvenial</h2>
+
+            <span>Conectando você à saúde.</span>
+
         </div>
 
-        <a href="/login" class="area-paciente">Entrar →</a>
-      </header>
+    </div>
 
-      <!-- Barra de progresso -->
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
+    <a href="/login" class="area-paciente">
 
-      <!-- HERO -->
-      <main class="hero">
-        <div class="hero-image">
-          <div class="medical-icon">❤️</div>
-        </div>
+        Entrar
 
-        <h1>Agende sua consulta com facilidade</h1>
+    </a>
+
+</header>
+
+<div class="barra-ciano"></div>
+
+<section class="hero">
+
+    <div class="hero-texto">
+
+        <span class="tag">
+
+            🩺 Plataforma Inteligente de Saúde
+
+        </span>
+
+        <h1>
+
+            Encontre hospitais próximos e agende consultas com facilidade.
+
+        </h1>
 
         <p>
-          Informe seus dados, escolha a especialidade e receba a confirmação do
-          seu atendimento em minutos.
+
+            A OwlConvenial conecta você aos hospitais credenciados mais próximos,
+            permitindo localizar unidades de atendimento, escolher especialidades
+            médicas e realizar agendamentos de maneira rápida, prática e segura.
+
         </p>
 
         <div class="buttons">
-          <a href="/hospitais">
-            <button class="btn-primary">▶ Agendar Consulta</button>
-          </a>
 
-          <a href="/paciente">
-            <button class="btn-secondary">👤 Área do Paciente</button>
-          </a>
+            <a href="/hospitais">
+
+                <button class="btn-primary">
+
+                    🏥 Agendar Consulta
+
+                </button>
+
+            </a>
+
+            <a href="/paciente">
+
+                <button class="btn-secondary">
+
+                    👤 Área do Paciente
+
+                </button>
+
+            </a>
+
         </div>
-      </main>
 
-    <!-- Barra de confiança -->
-    <section class="trust-bar">
-      <div class="trust-item">🔒 Seus dados são protegidos</div>
-      <div class="trust-item">✅ Sem filas</div>
-      <div class="trust-item">📋 Atendimento rápido</div>
-    </section>
+    </div>
 
-    <!-- Rodapé -->
-    <footer
-      style="
-        margin-top: 50px;
-        padding: 25px 20px;
-        background: #ffffff;
-        border-top: 1px solid #e5e7eb;
-        text-align: center;
-      "
-    >
-      <p
-        style="
-          color: #6b7280;
-          margin-bottom: 15px;
-          font-size: 15px;
-        "
-      >
-        © 2026 OwlConvenial • Facilitando o acesso à saúde.
-      </p>
+    <div class="hero-imagem">
 
-      <a
-        href="/sobrenos"
-        style="
-          display: inline-block;
-          padding: 12px 26px;
-          border-radius: 12px;
-          background: #00bcd4;
-          color: white;
-          text-decoration: none;
-          font-weight: 600;
-          transition: 0.3s;
-        "
-        onmouseover="this.style.background='#0097a7'"
-        onmouseout="this.style.background='#00bcd4'"
-      >
+        <img
+            src="{{ url_for('static', filename='Assets/img/logo.png') }}"
+            alt="Logo OwlConvenial">
+
+    </div>
+
+</section>
+
+<section class="cards">
+
+    <div class="card">
+
+        <div class="icone">
+
+            📍
+
+        </div>
+
+        <h3>
+
+            Hospitais Próximos
+
+        </h3>
+
+        <p>
+
+            Utilize sua localização para encontrar hospitais credenciados ao seu redor.
+
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <div class="icone">
+
+            📅
+
+        </div>
+
+        <h3>
+
+            Agendamento Online
+
+        </h3>
+
+        <p>
+
+            Escolha a especialidade, o hospital, a data e o horário sem enfrentar filas.
+
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <div class="icone">
+
+            🔒
+
+        </div>
+
+        <h3>
+
+            Dados Seguros
+
+        </h3>
+
+        <p>
+
+            Todas as informações dos pacientes são armazenadas com segurança.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="como-funciona">
+
+    <h2>
+
+        Como funciona?
+
+    </h2>
+
+    <div class="linha-passos">
+
+        <div class="passo">
+
+            <div class="numero">
+
+                1
+
+            </div>
+
+            <h3>
+
+                Faça Login
+
+            </h3>
+
+            <p>
+
+                Entre na plataforma utilizando sua conta.
+
+            </p>
+
+        </div>
+
+        <div class="passo">
+
+            <div class="numero">
+
+                2
+
+            </div>
+
+            <h3>
+
+                Localize Hospitais
+
+            </h3>
+
+            <p>
+
+                Visualize os hospitais próximos da sua localização.
+
+            </p>
+
+        </div>
+
+        <div class="passo">
+
+            <div class="numero">
+
+                3
+
+            </div>
+
+            <h3>
+
+                Escolha a Especialidade
+
+            </h3>
+
+            <p>
+
+                Selecione a especialidade médica desejada.
+
+            </p>
+
+        </div>
+
+        <div class="passo">
+
+            <div class="numero">
+
+                4
+
+            </div>
+
+            <h3>
+
+                Confirme
+
+            </h3>
+
+            <p>
+
+                Pronto! Sua consulta estará agendada.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="trust-bar">
+
+    <div class="trust-item">
+
+        🔒 Dados protegidos
+
+    </div>
+
+    <div class="trust-item">
+
+        🏥 Hospitais credenciados
+
+    </div>
+
+    <div class="trust-item">
+
+        📅 Agendamento remoto
+
+    </div>
+
+    <div class="trust-item">
+
+        📍 Geolocalização integrada
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+
+        © 2026 OwlConvenial • Projeto Integrador • Desenvolvimento de Sistemas
+
+    </p>
+
+    <a href="/sobrenos" class="btn-sobre">
+
         ℹ️ Sobre Nós
-      </a>
-    </footer>
 
-  </body>
+    </a>
+
+</footer>
+
+</body>
+
 </html>

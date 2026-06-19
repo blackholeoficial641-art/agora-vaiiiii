@@ -1,185 +1,583 @@
-/* Configurações Globais e Fontes */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:linear-gradient(180deg,#f7fdff,#edfdfd,#ffffff);
+
+    color:#2b2b2b;
+
+    min-height:100vh;
+
 }
 
-/* HEADER */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color:#2D7F62;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 70px;
+
+    background:white;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.05);
+
 }
 
-.logo img {
-    height: 45px; /* Altura controlada para a logo */
-    object-fit: contain;
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
 }
 
-.area-paciente {
-    color: #e9f1f4;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    transition: color 0.2s ease;
+.logo img{
+
+    width:70px;
+
 }
 
-.area-paciente:hover {
-    color: #818181;
+.logo-texto h2{
+
+    color:#00BCD4;
+
+    font-size:28px;
+
 }
 
-/* BARRA DE PROGRESSO */
-.progress-bar {
-    width: 100%;
-    height: 4px;
-    background-color: #e2e8f0;
+.logo-texto span{
+
+    color:#6b7280;
+
+    font-size:15px;
+
 }
 
-.progress {
-    width: 100%; /* Representa o primeiro passo do fluxo */
-    height: 100%;
-    background: linear-gradient(90deg, #000000, #2563eb);
-    border-radius: 0 2px 2px 0;
+.area-paciente{
+
+    text-decoration:none;
+
+    background:#00BCD4;
+
+    color:white;
+
+    padding:14px 28px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
 }
 
-/* HERO SECTION */
-.hero {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 60px 20px;
-    max-width: 800px;
-    margin: 0 auto;
+.area-paciente:hover{
+
+    background:#0097A7;
+
 }
 
-.hero-image {
-    background-color: #e0f2fe;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 24px;
-    box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.1);
+/* ===========================
+   BARRA SUPERIOR
+=========================== */
+
+.barra-ciano{
+
+    height:6px;
+
+    background:linear-gradient(90deg,#00BCD4,#00E5FF);
+
 }
 
-.medical-icon {
-    font-size: 36px;
-    animation: pulse 2s infinite ease-in-out;
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:70px 60px;
+
 }
 
-.hero h1 {
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    color: #0f172a;
-    margin-bottom: 16px;
-    line-height: 1.2;
+.hero-texto{
+
+    flex:1;
+
 }
 
-.hero p {
-    font-size: 18px;
-    color: #64748b;
-    max-width: 600px;
-    margin-bottom: 32px;
-    line-height: 1.6;
+.tag{
+
+    display:inline-block;
+
+    background:#dff8fc;
+
+    color:#00BCD4;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
 }
 
-/* BOTÕES */
-.buttons {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
+.hero h1{
+
+    font-size:52px;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+    color:#1f2937;
+
 }
 
-.buttons a {
-    text-decoration: none;
+.hero p{
+
+    font-size:19px;
+
+    color:#6b7280;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
 }
 
-button {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 14px 28px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+/* ===========================
+   BOTÕES
+=========================== */
+
+.buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
 }
 
-.btn-primary {
-    background-color: #2563eb;
-    color: #ffffff;
-    border: none;
-    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+.buttons a{
+
+    text-decoration:none;
+
 }
 
-.btn-primary:hover {
-    background-color: #1d4ed8;
-    transform: translateY(-2px);
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    font-family:inherit;
+
+    transition:.3s;
+
 }
 
-.btn-secondary {
-    background-color: #ffffff;
-    color: #475569;
-    border: 1px solid #cbd5e1;
+.btn-primary{
+
+    background:#00BCD4;
+
+    color:white;
+
+    padding:17px 34px;
+
+    border-radius:14px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    box-shadow:0 10px 25px rgba(0,188,212,.25);
+
 }
 
-.btn-secondary:hover {
-    background-color: #f8fafc;
-    color: #1e293b;
-    transform: translateY(-2px);
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    background:#0097A7;
+
 }
 
-/* BARRA DE CONFIANÇA */
-.trust-bar {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    background-color: #ffffff;
-    padding: 24px;
-    border-top: 1px solid #e2e8f0;
-    flex-wrap: wrap;
+.btn-secondary{
+
+    background:white;
+
+    color:#00BCD4;
+
+    border:2px solid #00BCD4;
+
+    padding:17px 34px;
+
+    border-radius:14px;
+
+    font-size:17px;
+
+    font-weight:600;
+
 }
 
-.trust-item {
-    font-size: 14px;
-    font-weight: 500;
-    color: #64748b;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.btn-secondary:hover{
+
+    background:#00BCD4;
+
+    color:white;
+
 }
 
-/* ANIMAÇÃO DE PULSO NO CORAÇÃO */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+/* ===========================
+   HERO LOGO
+=========================== */
+
+.hero-imagem{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
 }
 
-/* Responsividade Básica para Celular */
-@media (max-width: 600px) {
-    .hero h1 { font-size: 32px; }
-    .hero p { font-size: 16px; }
-    .buttons { flex-direction: column; width: 100%; }
-    button { width: 100%; }
-    .trust-bar { gap: 16px; flex-direction: column; align-items: center; }
+.hero-imagem img{
+
+    width:380px;
+
+    animation:flutuar 5s ease-in-out infinite;
+
+}
+
+@keyframes flutuar{
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.cards{
+
+    max-width:1300px;
+
+    margin:20px auto 70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+    padding:0 60px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.icone{
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    color:#00BCD4;
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+   COMO FUNCIONA
+=========================== */
+
+.como-funciona{
+
+    padding:70px 40px;
+
+    text-align:center;
+
+    background:white;
+
+}
+
+.como-funciona h2{
+
+    font-size:38px;
+
+    color:#00BCD4;
+
+    margin-bottom:50px;
+
+}
+
+.linha-passos{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.passo{
+
+    background:#f6fdff;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    transition:.3s;
+
+}
+
+.passo:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.numero{
+
+    width:70px;
+
+    height:70px;
+
+    background:#00BCD4;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    margin:0 auto 25px;
+
+}
+
+.passo h3{
+
+    color:#00BCD4;
+
+    margin-bottom:15px;
+
+}
+
+.passo p{
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+   BARRA DE CONFIANÇA
+=========================== */
+
+.trust-bar{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    padding:30px;
+
+    background:#00BCD4;
+
+}
+
+.trust-item{
+
+    color:white;
+
+    font-weight:600;
+
+    font-size:16px;
+
+}
+
+/* ===========================
+   RODAPÉ
+=========================== */
+
+footer{
+
+    margin-top:0;
+
+    background:#ffffff;
+
+    padding:45px;
+
+    text-align:center;
+
+    border-top:1px solid #e5e7eb;
+
+}
+
+footer p{
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+.btn-sobre{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:#00BCD4;
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-sobre:hover{
+
+    background:#0097A7;
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:900px){
+
+    .header{
+
+        padding:20px;
+
+    }
+
+    .hero{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        padding:50px 25px;
+
+    }
+
+    .hero h1{
+
+        font-size:36px;
+
+    }
+
+    .hero-imagem img{
+
+        width:260px;
+
+    }
+
+    .buttons{
+
+        justify-content:center;
+
+    }
+
 }
